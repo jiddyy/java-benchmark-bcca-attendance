@@ -13,12 +13,7 @@ public class App {
 
     public static void main(String[] args) throws Exception {
         SignInSheet newForm = signIn();
-        ArrayList<String> students = new ArrayList();
-        students.add("JD");
-        students.add("Oscar");
-        students.add("Derek");
-        students.add("Angie");
-        System.out.print(newForm);
+        signUserIn(newForm);
     }
 
     private static void signUserIn(SignInSheet newForm) {
@@ -39,13 +34,7 @@ public class App {
         String day = input.nextLine();
         System.out.println("Time: ");
         String time = input.nextLine();
-
-        if (students.contains(newForm.name)) {
-            System.out.println("Thanks.");
-        } else {
-            System.out.println("Invalid.");
-        }
-
+        System.out.println("Thank you.");
         return new SignInSheet(name, day, time);
     }
 }
